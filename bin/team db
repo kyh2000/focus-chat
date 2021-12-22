@@ -1,0 +1,25 @@
+drop database focus_db;
+create database focus_db;
+use focus_db;
+
+create table msg_log (
+		id int not null auto_increment,	
+		msg varchar(260),	
+		primary key(id)
+);
+
+create table user_table (
+		id int not null auto_increment,	
+		uid varchar(40) unique,
+		pwd varchar(20),	
+		primary key(id)
+);
+
+INSERT INTO user_table (uid, pwd) VALUES ("±Ë¿Á»÷", "0000");
+INSERT INTO user_table (uid, pwd) VALUES ("±Ëøµ«–", "1234");
+
+create table word_table (
+		id int not null auto_increment,	
+		wordName varchar(40) unique,
+		primary key(id)
+);
